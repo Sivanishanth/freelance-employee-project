@@ -1,0 +1,70 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'modules/common.html' %}
+</head>
+<body>
+
+
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-login-tab" data-bs-toggle="tab" data-bs-target="#nav-login" type="button" role="tab" aria-controls="nav-login" aria-selected="true">Login</button>
+          <button class="nav-link" id="nav-register-tab" data-bs-toggle="tab" data-bs-target="#nav-register" type="button" role="tab" aria-controls="nav-register" aria-selected="false">Register</button>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab" tabindex="0"></div>
+        <div class="tab-pane fade" id="nav-register" role="tabpanel" aria-labelledby="nav-register-tab" tabindex="0">
+
+
+
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button class="nav-link active" id="nav-Client_Register-tab" data-bs-toggle="tab" data-bs-target="#nav-Client_Register" type="button" role="tab" aria-controls="nav-Client_Register" aria-selected="true">Client_Register</button>
+              <button class="nav-link" id="nav-Tech_Team-tab" data-bs-toggle="tab" data-bs-target="#nav-Tech_Team" type="button" role="tab" aria-controls="nav-Tech_Team" aria-selected="false">Tech_Team</button>
+              <button class="nav-link" id="nav-Freelance_Register-tab" data-bs-toggle="tab" data-bs-target="#nav-Freelance_Register" type="button" role="tab" aria-controls="nav-Freelance_Register" aria-selected="false">Freelance_Register</button>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-Client_Register" role="tabpanel" aria-labelledby="nav-Client_Register-tab" tabindex="0">
+  
+              <form action="/" method="post">
+                {% csrf_token %}
+                {{ Client_Register }}
+                <input type="submit" value="Submit">
+            </form>
+
+            </div>
+            <div class="tab-pane fade" id="nav-Tech_Team" role="tabpanel" aria-labelledby="nav-Tech_Team-tab" tabindex="0">
+              <form action="/" method="post">
+                {% csrf_token %}
+                {{ Tech_Team }}
+                <input type="submit" value="Submit">
+            </form>
+
+            </div>
+            
+            <div class="tab-pane fade" id="nav-Freelance_Register" role="tabpanel" aria-labelledby="nav-Freelance_Register-tab" tabindex="0">
+              <form action="/" method="post">
+                {% csrf_token %}
+                {{ Freelance_Register }}
+                <input type="submit" value="Submit">
+              </form> 
+
+            </div>
+          </div>
+        </div>
+       
+   
+
+
+
+
+          
+    </div>
+    
+</body>
+</html>
